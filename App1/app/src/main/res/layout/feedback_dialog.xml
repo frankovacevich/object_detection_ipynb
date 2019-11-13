@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="We appreciate every feedback you can send us!"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginBottom="10dp"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/feedback_radiobutton_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="The picture I just took was wronly labeled (you will be sending us the picture)"/>
+            <RadioButton
+                android:id="@+id/feedback_radiobutton_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Some feature doesn't work"/>
+            <RadioButton
+                android:id="@+id/feedback_radiobutton_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="I have an idea for a new feature"/>
+            <RadioButton
+                android:id="@+id/feedback_radiobutton_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Other"/>
+        </RadioGroup>
+        <EditText
+            android:id="@+id/feedback_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:inputType="textMultiLine"
+            android:hint="Write a message..."
+            android:gravity="top"/>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

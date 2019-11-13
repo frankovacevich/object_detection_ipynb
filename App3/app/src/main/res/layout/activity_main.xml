@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--TOP BAR-->
+        <include
+            layout="@layout/top_bar_big"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-10dp"
+            android:elevation="1dp" />
+
+        <!--REST-->
+        <RelativeLayout
+            android:id="@+id/relative_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:elevation="-1dp">
+
+            <!--CAMERA BUTTON-->
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/take_picture_button"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:layout_margin="16dp"
+                android:onClick="button_camera_click"
+                android:src="@drawable/ic_camera" />
+
+            <!--IMAGE FRAME-->
+            <ImageView
+                android:id="@+id/image_frame_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:scaleType="fitXY"/>
+
+            <!--CAMERA FRAME-->
+            <FrameLayout
+                android:id="@+id/camera_frame_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible" />
+
+            <!--SETTINGS FRAME-->
+            <include
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                layout="@layout/settings_frame"/>
+
+            <!--LOADING FRAME-->
+            <ProgressBar
+                android:visibility="gone"
+                android:id="@+id/loading_frame_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"/>
+
+            <!--SETTINGS BUTTON-->
+            <ImageView
+                android:id="@+id/config_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_settings"
+                android:layout_margin="24dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:onClick="button_config_click"/>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
